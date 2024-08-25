@@ -15,11 +15,17 @@ pipeline {
               sh 'docker run --name mytestcontainer -itd -p 5000:5000 myprojectimage'
               sh 'curl localhost:5000'
             }
-        stage('destroy') {
+        
+    }
+
+    stage('destroy') {
             steps {
               sh 'docker stop mytestcontainer'
-              
             }
-        }
+        
+    }
+    
     }
 }
+       
+
