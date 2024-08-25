@@ -6,6 +6,6 @@ COPY . .
 
 RUN pip install flask
 
-CMD ["python3","mypythonerver.py"]
+CMD ["python","mypythonserver.py"]
 
 EXPOSE 5000
