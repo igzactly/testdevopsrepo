@@ -5,6 +5,7 @@ pipeline {
         stage('build') {
             steps {
                git branch: 'main', url: 'https://github.com/igzactly/testdevopsrepo.git'
+               sh 'ls -a'
                sh 'docker build -t myprojectimage .'
             }
         }
